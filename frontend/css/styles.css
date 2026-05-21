@@ -1,0 +1,160 @@
+/* Reset and global styles */
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+    background-color: #08090d;
+    color: #f1f5f9;
+}
+
+/* Glassmorphism utility card */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .glass-panel {
+    background: rgba(13, 15, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Rigid ad containers to prevent Cumulative Layout Shifts (CLS) */
+.ad-slot-top {
+    height: 90px; /* Rigid desktop height */
+    width: 100%;
+}
+
+.ad-slot-bottom {
+    height: 50px; /* Rigid bottom mobile/desktop height */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .ad-slot-top {
+        height: 50px; /* Responsive mobile scaling, strictly reserved */
+    }
+}
+
+.ad-skeleton {
+    background: linear-gradient(90deg, rgba(0,0,0,0.02) 25%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.02) 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 2s infinite;
+}
+
+.dark .ad-skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.07) 50%, rgba(255,255,255,0.03) 75%);
+}
+
+@keyframes loading-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Chat bubble aesthetics */
+.message-bubble {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.85rem 1.15rem;
+    border-radius: 1.25rem;
+    word-break: normal;
+    overflow-wrap: break-word;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.message-received {
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top-left-radius: 0.25rem;
+    color: #1e293b;
+}
+
+.dark .message-received {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #f1f5f9;
+}
+
+.message-sent {
+    background: linear-gradient(135deg, #1471f5 0%, #0e5ad8 100%);
+    border-top-right-radius: 0.25rem;
+    color: #ffffff;
+    align-self: flex-end;
+}
+
+/* System notice / notification formatting */
+.system-notice {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: center;
+    max-width: fit-content;
+    margin: 0.75rem auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .system-notice {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+}
+
+/* Interstitial show/hide animation */
+.animate-fade-in {
+    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
