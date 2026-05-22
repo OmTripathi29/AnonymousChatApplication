@@ -152,55 +152,11 @@
                 <div id="messages-panel" class="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 relative bg-slate-50/50 dark:bg-darkBg/20 transition-colors duration-300">
                     <!-- Dynamic chat bubbles loaded here -->
                     <div id="searching-shimmer" class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-slate-50/90 dark:bg-darkBg/60 backdrop-blur-sm z-10 hidden">
-                    <div class="flex flex-col items-center justify-center gap-6 max-w-md w-full px-4">
-
-    <!-- Matching Animation -->
-    <div class="relative w-16 h-16">
-        <span class="absolute inset-0 rounded-full border-4 border-primary-500/20 animate-ping" style="animation-duration: 2s;"></span>
-
-        <span class="absolute inset-0 rounded-full border-4 border-indigo-500/10 animate-ping" style="animation-duration: 3s; animation-delay: 0.5s;"></span>
-
-        <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-primary-500 to-indigo-500 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-primary-500/20">
-            🌀
-        </div>
-    </div>
-
-    <!-- Status -->
-    <div class="text-center">
-        <h3 class="font-outfit font-bold text-lg text-slate-800 dark:text-white animate-pulse">
-            Finding a partner...
-        </h3>
-
-        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            Please wait while we match you with someone online.
-        </p>
-    </div>
-
-    <!-- Sponsored Ad Card -->
-    <div class="rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl p-4 shadow-2xl w-[300px]">
-
-        <div class="text-[10px] uppercase tracking-[0.25em] text-primary-400 mb-3 text-center">
-            Sponsored
-        </div>
-
-        <div class="w-full flex justify-center items-center overflow-hidden rounded-2xl bg-black/20">
-
-            <div id="matchmaking-sponsored-ad">
-
-                <script type="text/javascript">
-                    aclib.runBanner({
-                        zoneId: '11346018',
-                    });
-                </script>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-                       
+                    
+                        <div class="text-center">
+                            <h3 class="font-outfit font-bold text-lg text-slate-800 dark:text-white animate-pulse">Finding a partner...</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Please wait, matching you with someone online...</p>
+                        </div>
                     </div>
                 </div>
 
@@ -250,11 +206,40 @@
             
             <!-- Explicit size reserved for Interstitial Ad Frame -->
             <div class="w-full h-64 my-6 bg-slate-50 dark:bg-slate-950 rounded-2xl flex items-center justify-center border border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300" id="interstitial-ad-frame">
-                <div class="absolute inset-0 bg-gradient-to-tr from-primary-100/10 to-indigo-100/10 dark:from-primary-950/20 dark:to-indigo-950/20 flex flex-col items-center justify-center gap-3">
-                    <span class="text-4xl animate-bounce">📦</span>
-                    <p class="font-outfit font-bold text-slate-800 dark:text-white">Premium Sponsor Promotion</p>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 px-6">Explicit Ad Frame container dimension layout to guarantee 0px layout shifts.</p>
-                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+
+    <!-- Sponsor Header -->
+    <div class="text-[10px] uppercase tracking-[0.25em] text-primary-400 mb-3 font-bold">
+        Sponsored Matchmaking
+    </div>
+
+    <!-- Ad Container -->
+    <div class="w-[300px] h-[250px] rounded-2xl overflow-hidden bg-black/20 border border-white/10 shadow-2xl flex items-center justify-center">
+
+        <div id="interstitial-sponsored-ad">
+
+            <script type="text/javascript">
+                aclib.runBanner({
+                    zoneId: '11346018',
+                });
+            </script>
+
+        </div>
+
+    </div>
+
+    <!-- Status -->
+    <div class="mt-5 text-center">
+        <p class="font-outfit font-bold text-white text-lg">
+            Connecting you securely...
+        </p>
+
+        <p class="text-xs text-slate-400 mt-1">
+            Searching for an active partner online.
+        </p>
+    </div>
+
+</div>
             </div>
 
             <!-- Interstitial countdown -->
