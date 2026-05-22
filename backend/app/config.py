@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     REDIS_URL: Optional[str] = "redis://localhost:6379/0"
     
     # Production Frontend URL for CORS configuration (e.g. Vercel deployment)
-    FRONTEND_URL: Optional[str] = "https://vortexchat.vercel.app"
+    FRONTEND_URL: Optional[str] = "https://anonymous-chat-application-ruby.vercel.app/"
     
     # Rate Limiting
     RATE_LIMIT_TOKENS: int = 5

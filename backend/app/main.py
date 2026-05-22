@@ -52,6 +52,7 @@ allowed_origins = [
     "http://127.0.0.1:8000",
     "http://localhost:5173",  # Vite local server
     "http://localhost:3000",
+    "https://anonymous-chat-application-ruby.vercel.app"
 ]
 if settings.FRONTEND_URL:
     allowed_origins.append(settings.FRONTEND_URL)
@@ -95,7 +96,7 @@ async def enter_as_guest(response: Response):
         httponly=True,
         max_age=24 * 3600,
         samesite="lax",
-        secure=False  # Set to True in production with TLS/HTTPS
+        secure=True  # Set to True in production with TLS/HTTPS
     )
     
     return {
