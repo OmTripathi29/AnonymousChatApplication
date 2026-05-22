@@ -61,11 +61,8 @@
             }
         })();
     </script>
-    <script
-    id="aclib"
-    type="text/javascript"
-    src="//asccdn.com/script/aclib.js">
-</script>
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
 </head>
 
 
@@ -196,11 +193,14 @@
 
     <!-- 3. STICKY BOTTOM AD BANNER CONTAINER (Zero CLS) -->
     <footer class="ad-slot-bottom shrink-0 bg-slate-100 dark:bg-white/5 border-t border-slate-200 dark:border-white/5 flex items-center justify-center relative overflow-hidden transition-colors duration-300" id="ad-container-bottom">
-       <script
-            id="aclib"
-            type="text/javascript"
-            src="//asccdn.com/script/aclib.js">
+        <div>
+    <script type="text/javascript">
+        aclib.runBanner({
+            zoneId: '11345370',
+        });
         </script>
+</div>
+
     </footer>
 
     <!-- 4. INTERSTITIAL AD & ROOM ROUTING MODAL -->
