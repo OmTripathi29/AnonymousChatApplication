@@ -48,7 +48,7 @@
     </script>
     
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     
     <!-- Theme Initialization to prevent Flash of Unstyled Content (FOUC) -->
     <script>
@@ -62,6 +62,12 @@
         })();
     </script>
 </head>
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'wyyrt0c0ge',
+    });
+</script>
+
 <body class="bg-slate-50 dark:bg-darkBg text-slate-900 dark:text-slate-100 font-sans h-screen flex flex-col overflow-hidden selection:bg-primary-500 selection:text-white transition-colors duration-300">
 
     <!-- 1. HEADER LOGO & UTILITIES -->
@@ -140,7 +146,7 @@
                     <!-- Transparent Skeleton to keep CLS perfectly zero -->
                     <div class="ad-skeleton flex items-center justify-center gap-3 text-xs text-slate-500 font-medium absolute inset-0">
                         <span class="animate-pulse w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
-                        <span>Programmatic Ad Frame (90px Height)</span>
+                         <div id="adcash-sticky-banner"></div>
                     </div>
                 </div>
 
@@ -191,7 +197,7 @@
     <footer class="ad-slot-bottom shrink-0 bg-slate-100 dark:bg-white/5 border-t border-slate-200 dark:border-white/5 flex items-center justify-center relative overflow-hidden transition-colors duration-300" id="ad-container-bottom">
         <div class="ad-skeleton flex items-center justify-center gap-3 text-xs text-slate-500 font-medium absolute inset-0">
             <span class="animate-pulse w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
-            <span>Programmatic Sticky Banner (50px Height)</span>
+            <div id="adcash-sticky-banner"></div>
         </div>
     </footer>
 
@@ -229,6 +235,6 @@
     </div>
 
     <!-- JS Module Entry Point -->
-    <script type="module" src="/static/js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>

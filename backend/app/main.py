@@ -52,7 +52,8 @@ allowed_origins = [
     "http://127.0.0.1:8000",
     "http://localhost:5173",  # Vite local server
     "http://localhost:3000",
-    "https://anonymous-chat-application-ruby.vercel.app"
+    "https://vortexxchatt.vercel.app"
+    
 ]
 if settings.FRONTEND_URL:
     allowed_origins.append(settings.FRONTEND_URL)
