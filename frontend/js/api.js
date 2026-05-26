@@ -2,7 +2,7 @@
 // Replace the Render URL with your actual live Render Web Service URL when deploying
 export const BACKEND_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
     ? window.location.origin
-    : "https://anonymouschatapplication.onrender.com";
+    : "https://anonymouschatapplication-1.onrender.com";
 
 const API_BASE = BACKEND_URL;
 
